@@ -1,0 +1,266 @@
+%%% LaTeX Template: Designer's CV
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: March 2012
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document properties and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,12pt,final]{memoir}
+
+% misc
+\renewcommand{\familydefault}{bch}	% font
+\pagestyle{empty}					% no pagenumbering
+\setlength{\parindent}{0pt}			% no paragraph indentation
+
+
+% required packages (add your own)
+\usepackage{flowfram}										% column layout
+\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}% margins
+\usepackage{graphicx}										% figures
+\usepackage{url}											% URLs
+\usepackage[usenames,dvipsnames]{xcolor}					% color
+\usepackage{multicol}										% columns env.
+	\setlength{\multicolsep}{0pt}
+\usepackage{paralist}										% compact lists
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create column layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define length commands
+\setlength{\vcolumnsep}{\baselineskip}
+\setlength{\columnsep}{\vcolumnsep}
+
+% frame setup (flowfram package)
+% left frame
+\newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
+	\newlength{\LeftMainSep}
+	\setlength{\LeftMainSep}{0.2\textwidth}
+	\addtolength{\LeftMainSep}{1\columnsep}
+ 
+% small static frame for the vertical line
+\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+ 
+% content of the static frame
+\begin{staticcontents}{1}
+\hfill
+\tikz{%
+	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
+	(0,0) -- (0,\textheight);}%
+\hfill\mbox{}
+\end{staticcontents}
+ 
+% right frame
+\addtolength{\LeftMainSep}{1.5pt}
+\addtolength{\LeftMainSep}{1\columnsep}
+\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define macros (for convience)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Sep}{\vspace{1.5em}}
+\newcommand{\SmallSep}{\vspace{0.5em}}
+
+\newenvironment{AboutMe}
+	{\ignorespaces\textbf{\color{RoyalBlue} About me}}
+	{\Sep\ignorespacesafterend}
+	
+\newcommand{\CVSection}[1]
+	{\Large\textbf{#1}\par
+	\SmallSep\normalsize\normalfont}
+
+\newcommand{\CVItem}[1]
+	{\textbf{\color{RoyalBlue} #1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Left frame
+%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flushright}\small
+
+	
+	 \CVItem{\\ Contact} \\
+	 
+	\url{mahtab.farrokh@gmail.com}  \\
+	(+98)9120764487 
+	\CVItem{Address} \\
+	424 Hafez Ave. \\
+	Tehran\\
+	Iran
+	
+\end{flushright}\normalsize
+\framebreak
+
+
+% Right frame
+%%%%%%%%%%%%%%%%%%%%
+\Huge\bfseries {\color{RoyalBlue} Mahtab Farrokh} \\
+\Large\bfseries  Undergraduate Hardware Engineering \\
+
+\normalsize\normalfont
+
+% About me
+%\begin{AboutMe}
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel %bibendum metus. Proin rutrum pharetra molestie. Cras sollicitudin %nulla nec leo lobortis in tristique purus pretium. Ut eu felis nulla. %Pellentesque condimentum justo ut ligula feugiat nec facilisis tellus %ultricies. Nullam sit amet dictum ipsum. Sed lacus neque, hendrerit eu %rhoncus nec, pellentesque vitae sem.
+%\end{AboutMe}
+
+\CVSection{Interests}
+	\CVItem{Professional}
+	\\
+	Internet of Things, Android Programming, Graph theory
+	\\
+	\CVItem{Personal}
+	\\
+	Violin, Pottery, Wood Handcraft
+	
+\Sep
+
+% Experience
+\CVSection{Education}
+\CVItem{2015 - 2019, B.Sc. in Computer Hardware Engineering}\\
+AmirKabir University of Technology (Tehran Polytechnic), Tehran, Iran
+GPA(up to now): 16.5
+Total Passed Credits: 33
+\SmallSep
+
+\CVItem{2008 - 2015, Diploma in Physics and Mathematics Discipline}\\
+Farzanegan 1,Tehran, Iran (NODET)
+Attended Iran National Olympiad in Computer Focused on Combinatorics
+, graph theory and c++ Programming.
+GPA: 19.36/20
+\Sep
+
+\CVSection{Honors and Awards}
+\begin{itemize}
+	\item Ranked top 0.4 \% among more than 180,000 students participated
+in the nationwide entrance examination of undergraduate studies
+in Iranian universities (2015) 
+	\item Semi-finalist at National Mathematics Olympiad (March 2013)
+	\item accepted for 2nd level of Kharazmi awards assessments(2011)
+	\item Member of National Organization for Development of Exceptional  Talents (NODET)(2007-2014)
+ 
+\end{itemize}
+
+\Sep
+
+
+
+\CVSection{Teaching Experience}
+	\begin{itemize}
+	\item  Teacher Assistant, Introduction to Programming, Amirkabir University of technology, Under Supervision of Prof.Bakhshi (Fall-2016)
+	\end{itemize}
+\Sep
+
+\newpage
+\normalsize\normalfont
+\framebreak
+\framebreak
+\\
+
+\CVSection{Skills}
+\CVItem{Programming}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Python 3
+	\item Java
+	\item C and C++
+	\item Verilog
+	
+\end{compactitem}
+\end{multicols}
+\SmallSep
+\CVItem{Web and DB Technologies}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item MySQL 
+	\item HTML(Familiar)
+\end{compactitem}
+\end{multicols}
+\SmallSep
+\CVItem{Operating Systems}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Linux
+	\item Windows
+\end{compactitem}
+\end{multicols}
+\SmallSep
+\CVItem{Typesetting}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item \LaTeX
+	\item Vim
+	\item Microsoft Word
+\end{compactitem}
+\end{multicols}
+\SmallSep
+\CVItem{Others}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Qt
+	\item Eclipse
+	\item IntelliJ
+	\item Pycharm
+	\item Android Studio
+\end{compactitem}
+\end{multicols}
+
+\Sep 
+
+\CVSection{Projects}
+\begin{itemize}
+	\item Data Structure : search engine using inverted index algorithm - Python.
+	
+	\item Advanced Computer Programming:
+		\begin{itemize}[$\circ$]
+		\item  Implementation of a graphical game with multiplayer support and AI. Computer Player.(Strategic Game) - Java.
+     	\item Implementation of Pacman game - Java.
+	    \item Implementation of Arcade game - Java.
+		\end{itemize}
+		
+	\item Principles of Computer and Programming : living cell simulation - C.
+	\item Implementation of Notepad using Qt - C++.
+	\item Wind Tonel for Educational purpose. Test room dimention 3000
+$cm^{3}$.
+	\item Hovercraft modeling for phisics workshop.Selected for 2nd level of Kharazmi awards assessment(2011)
+ 
+\end{itemize}
+
+\Sep
+
+\CVSection{High Grades in undergraduate courses}
+	\begin{itemize}
+		\item  Advanced Computer Programming - Mr. Poorvatan - Spring 2016 - (18/20)
+		\item Principles of Computer and Programming - Dr.Bakhshi - Fall 2015 -(20/20)
+	\end{itemize}
+
+\newpage
+\normalsize\normalfont
+\framebreak
+\framebreak
+\\
+
+\CVSection{Extra-Curricular Activities}
+	\begin{itemize}
+		\item Member of Execution Committee, 8th National AUT Linux Festival - Spring 2016
+		\item Member of Execution Committee, 2nd International AUT ACM ICPC - Fall 2016
+	\end{itemize}
+	
+\CVSection{References}
+	\begin{itemize}
+		\item {Professor Bahador Bakhshi, Assistant Professor \\
+Computer Engineering and IT Department, Amirkabir University of Technology\\
+Email: bbakhshi@aut.ac.ir}
+	\end{itemize}
+
+\end{document}
