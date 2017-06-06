@@ -15,7 +15,7 @@
 \pagestyle{empty}					% no pagenumbering
 \setlength{\parindent}{0pt}			% no paragraph indentation
 
-
+\usepackage{hyperref}
 % required packages (add your own)
 \usepackage{flowfram}										% column layout
 \usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}% margins
@@ -91,7 +91,7 @@
 	
 	 \CVItem{\\ Contact} \\
 	 
-	\url{mahtab.farrokh@gmail.com}  \\
+	\href{mailto://mahtab.farrokh@gmail.com}{mahtab.farrokh\\ @gmail.com}  \\
 	(+98)9120764487 
 	\CVItem{Address} \\
 	424 Hafez Ave. \\
@@ -117,7 +117,7 @@
 \CVSection{Interests}
 	\CVItem{Professional}
 	\\
-	Internet of Things, Android Programming, Graph theory
+	Internet of Things, Computer Networks, Android Programming, Graph theory
 	\\
 	\CVItem{Personal}
 	\\
@@ -129,8 +129,8 @@
 \CVSection{Education}
 \CVItem{2015 - 2019, B.Sc. in Computer Hardware Engineering}\\
 AmirKabir University of Technology (Tehran Polytechnic), Tehran, Iran
-GPA(up to now): 16.5
-Total Passed Credits: 33
+GPA(up to now): 17.13/20
+Total Passed Credits: 50
 \SmallSep
 
 \CVItem{2008 - 2015, Diploma in Physics and Mathematics Discipline}\\
@@ -172,8 +172,9 @@ in Iranian universities (2015)
 \begin{multicols}{3}
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
 	\item Python 3
-	\item Java
+	\item VHDL
 	\item C and C++
+	\item Java
 	\item Verilog
 	
 \end{compactitem}
@@ -183,6 +184,8 @@ in Iranian universities (2015)
 \begin{multicols}{3}
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
 	\item MySQL 
+	\item mongoDb
+	\item jango
 	\item HTML(Familiar)
 \end{compactitem}
 \end{multicols}
@@ -207,7 +210,9 @@ in Iranian universities (2015)
 \CVItem{Others}
 \begin{multicols}{3}
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Docker
 	\item Qt
+	\item modelsim
 	\item Eclipse
 	\item IntelliJ
 	\item Pycharm
@@ -219,8 +224,11 @@ in Iranian universities (2015)
 
 \CVSection{Projects}
 \begin{itemize}
-	\item Data Structure : search engine using inverted index algorithm - Python.
-	
+	\item computer architecture : Design and implementation of a small modular processor, called SAYEH (Simple Architecture, Yet Enough Hardware) - VHDL
+	\item \href{https:://github.com/DistributedCalc/Database-2}{Distributed Calculator} implemented database part using mongoDb and docker - Python
+	\item Data Structure : \href{https://github.com/mahtabfarrokh/SearchEngine}{search engine using inverted index algorithm} - Python.
+	\item Data Structure : \href{https://github.com/mahtabfarrokh/Finite-state_machine}{Finite state machine} - Python.
+	\item Logic Circuites : \href {https://github.com/mahtabfarrokh/Traffic_Light}{Traffic Light} - Verilog.
 	\item Advanced Computer Programming:
 		\begin{itemize}[$\circ$]
 		\item  Implementation of a graphical game with multiplayer support and AI. Computer Player.(Strategic Game) - Java.
@@ -229,20 +237,13 @@ in Iranian universities (2015)
 		\end{itemize}
 		
 	\item Principles of Computer and Programming : living cell simulation - C.
-	\item Implementation of Notepad using Qt - C++.
+	\item \href {https://github.com/mahtabfarrokh/NotePad}{Implementation of Notepad using Qt} - C++.
 	\item Wind Tonel for Educational purpose. Test room dimention 3000
 $cm^{3}$.
 	\item Hovercraft modeling for phisics workshop.Selected for 2nd level of Kharazmi awards assessment(2011)
  
 \end{itemize}
 
-\Sep
-
-\CVSection{High Grades in undergraduate courses}
-	\begin{itemize}
-		\item  Advanced Computer Programming - Mr. Poorvatan - Spring 2016 - (18/20)
-		\item Principles of Computer and Programming - Dr.Bakhshi - Fall 2015 -(20/20)
-	\end{itemize}
 
 \newpage
 \normalsize\normalfont
@@ -250,10 +251,27 @@ $cm^{3}$.
 \framebreak
 \\
 
+\Sep
+
+
+\CVSection{High Grades in undergraduate courses}
+	\begin{itemize}
+		\item Data Structures \& Algorithms - Dr.Dehghan - Fall 2017 - (20/20)
+		\item Logic Circuits - Dr.Sedighi - Fall 2017 - (18.9/20)
+		\item Electric Circuits - Dr.Khorsandi - Fall 2017 - (18.5/20)	
+		\item Advanced Computer Programming - Mr.Poorvatan - Spring 2016 - (18/20)
+		\item Principles of Computer and Programming - Dr.Bakhshi - Fall 2015 -(20/20)
+		
+	\end{itemize}
+
+
 \CVSection{Extra-Curricular Activities}
 	\begin{itemize}
+		\item Elected as the President of Students Scientific Chapter(SSC), CEIT Department, Amirkabir University of Technology (Tehran Polytechnic)- 2017
+		\item Member of Execution Committee, 9th National AUT Linux Festival - Spring 2017
 		\item Member of Execution Committee, 8th National AUT Linux Festival - Spring 2016
 		\item Member of Execution Committee, 2nd International AUT ACM ICPC - Fall 2016
+		
 	\end{itemize}
 	
 \CVSection{References}
@@ -261,6 +279,13 @@ $cm^{3}$.
 		\item {Professor Bahador Bakhshi, Assistant Professor \\
 Computer Engineering and IT Department, Amirkabir University of Technology\\
 Email: bbakhshi@aut.ac.ir}
+
+		\item {Professor Masoud Sabaei , Associate professor\\ 
+		Computer Engineering and IT Department, Amirkabir University of Technology\\
+Email: sabaei@aut.ac.ir } 
+		\item {Professor Siavash Khorsandi , Associate professor\\ 
+		Computer Engineering and IT Department, Amirkabir University of Technology\\
+Email: khorsandi@aut.ac.ir }
 	\end{itemize}
 
 \end{document}
